@@ -1,9 +1,9 @@
 {
   "tests": [
     {
-      "name": "M08: Existeix la carpeta .(doc",
+      "name": "M09: En el CSS Utilitza la variable --pregunta per definir el color de fons de les preguntes",
       "setup": "",
-      "run": "test -d doc",
+      "run": "find . -type f -name \"*.css\" -exec grep \"\\-\\-pregunta\" {} +",
       "input": "",
       "output": "",
       "comparison": "exact",
@@ -11,9 +11,9 @@
       "points": null
     },
     {
-      "name": "M09: En el CSS Utilitza la variable --pregunta per definir el color de fons de les preguntes",
+      "name": "M08: Existeix la carpeta /doc",
       "setup": "",
-      "run": "find . -type f -name \"*.css\" -exec grep \"\\-\\-pregunta\" {} +",
+      "run": "test -d ./doc",
       "input": "",
       "output": "",
       "comparison": "exact",
