@@ -4,4 +4,9 @@
 
 div.pregunta {
     color: var(--pregunta);
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "pregunta   pregunta ."
+        ".          resposta resposta";
 }
