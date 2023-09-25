@@ -1,0 +1,7 @@
+:root {
+    --pregunta: brown;
+}
+
+div.pregunta {
+    color: var(--pregunta);
+}
