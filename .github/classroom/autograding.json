@@ -1,9 +1,19 @@
 {
   "tests": [
     {
-      "name": "Carpeta doc",
+      "name": "M08: Existeix la carpeta .(doc",
       "setup": "",
       "run": "test -d doc",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "M09: Utilitza la variable --pregunta per definir el color de fons de les preguntes",
+      "setup": "",
+      "run": "grep \"\\-\\-pregunta\" *.css",
       "input": "",
       "output": "",
       "comparison": "exact",
