@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Carpeta doc",
+      "setup": "",
+      "run": "test -d doc",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 1
+    }
+  ]
+}
