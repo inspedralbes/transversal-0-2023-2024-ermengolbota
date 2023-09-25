@@ -18,6 +18,16 @@
       "output": "",
       "comparison": "exact",
       "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "M09: Enllaç des d'un fitxer README.md al prototip de design.enpot.app",
+      "setup": "",
+      "run": "find . -type f -name \"*.md\" -exec grep \"design.penpot.app\" {} +",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
       "points": 1
     }
   ]
