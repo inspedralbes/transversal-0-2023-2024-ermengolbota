@@ -28,6 +28,16 @@
       "output": "",
       "comparison": "exact",
       "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "M09: Ús de grid-template-areas",
+      "setup": "",
+      "run": "find . -type f -name \"*.css\" -exec grep \"grid-template-areas\" {} +",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
       "points": 1
     }
   ]
