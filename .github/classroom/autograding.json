@@ -8,12 +8,12 @@
       "output": "",
       "comparison": "exact",
       "timeout": 1,
-      "points": 1
+      "points": null
     },
     {
-      "name": "M09: Utilitza la variable --pregunta per definir el color de fons de les preguntes",
+      "name": "M09: En el CSS Utilitza la variable --pregunta per definir el color de fons de les preguntes",
       "setup": "",
-      "run": "grep \"\\-\\-pregunta\" *.css",
+      "run": "find . -type f -name \"*.css\" -exec grep \"\\-\\-pregunta\" {} +",
       "input": "",
       "output": "",
       "comparison": "exact",
