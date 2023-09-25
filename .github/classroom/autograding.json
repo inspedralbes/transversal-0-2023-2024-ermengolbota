@@ -1,19 +1,39 @@
 {
   "tests": [
     {
-      "name": "M08: Existeix la carpeta .(doc",
+      "name": "M09: En el CSS Utilitza la variable --pregunta per definir el color de fons de les preguntes",
       "setup": "",
-      "run": "test -d doc",
+      "run": "find . -type f -name \"*.css\" -exec grep \"\\-\\-pregunta\" {} +",
       "input": "",
       "output": "",
       "comparison": "exact",
       "timeout": 1,
-      "points": 1
+      "points": null
     },
     {
-      "name": "M09: Utilitza la variable --pregunta per definir el color de fons de les preguntes",
+      "name": "M08: Existeix la carpeta /doc",
       "setup": "",
-      "run": "grep \"\\-\\-pregunta\" *.css",
+      "run": "test -d ./doc",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "M09: Enllaç des d'un fitxer README.md al prototip de design.enpot.app",
+      "setup": "",
+      "run": "find . -type f -name \"*.md\" -exec grep \"design.penpot.app\" {} +",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "M09: Ús de grid-template-areas",
+      "setup": "",
+      "run": "find . -type f -name \"*.css\" -exec grep \"grid-template-areas\" {} +",
       "input": "",
       "output": "",
       "comparison": "exact",
