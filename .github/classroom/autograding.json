@@ -8,7 +8,7 @@
       "output": "",
       "comparison": "exact",
       "timeout": 1,
-      "points": 1
+      "points": null
     },
     {
       "name": "M08: Existeix la carpeta /doc",
@@ -18,7 +18,7 @@
       "output": "",
       "comparison": "exact",
       "timeout": 1,
-      "points": 1
+      "points": null
     },
     {
       "name": "M09: Enllaç des d'un fitxer README.md al prototip de design.enpot.app",
@@ -28,12 +28,22 @@
       "output": "",
       "comparison": "exact",
       "timeout": 1,
-      "points": 1
+      "points": null
     },
     {
       "name": "M09: Ús de grid-template-areas",
       "setup": "",
       "run": "find . -type f -name \"*.css\" -exec grep \"grid-template-areas\" {} +",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Existeix carpeta js",
+      "setup": "",
+      "run": "test -d js",
       "input": "",
       "output": "",
       "comparison": "exact",
