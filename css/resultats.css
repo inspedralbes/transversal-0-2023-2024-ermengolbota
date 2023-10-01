@@ -1,0 +1,27 @@
+/* Estil per l'encapçalament h1 */
+h1 {
+    font-size: 36px; /* Tria la mida de font que consideris impactant */
+    text-align: center; /* Centra el text */
+    color: #FF5733; /* Canvia el color de text al teu gust */
+    margin-bottom: 20px; /* Espai inferior per separar de la llista */
+  }
+  
+  /* Estil per la llista ul */
+  ul {
+    list-style: none; /* Elimina els marcadors de llista */
+    padding: 0; /* Elimina el padding per defecte de la llista */
+    text-align: center; /* Centra tot el contingut de la llista */
+  }
+  
+  /* Estil per a cada element de la llista li */
+  li {
+    margin-bottom: 20px; /* Espai inferior entre elements de la llista */
+    font-size: 18px; 
+  }
+  
+  /* Estil específic per als anys  */
+  li span {
+    display: block; /* Fer que els anys siguin en una nova línia */
+    font-size: 22px; 
+  }
+  
