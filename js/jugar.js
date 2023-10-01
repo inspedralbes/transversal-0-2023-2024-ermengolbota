@@ -16,6 +16,9 @@ function addPlayability(card ) {
         if (event.target.tagName === 'BUTTON') {
             let selectedYear = event.target.innerText;
 
+            //add class actiu to the event.target
+            event.target.classList.add('actiu');
+
             // we look for the parent with the atribute data-title
             let parent = event.target.parentElement;
             while (!parent.hasAttribute('data-title')) {
@@ -27,37 +30,41 @@ function addPlayability(card ) {
             const title = parent.getAttribute('data-title');
             localStorage.setItem(title, selectedYear);
 
-            const cards = document.querySelectorAll('.movie-card');
-            let currentCard = 0;
-            cards.forEach((tmpCard, index) => {
-                if (!tmpCard.classList.contains('ocult')) {
-                    tmpCard.classList.add('ocult');
-                    currentCard = index;
-                }
-            });
-            //we show the next card
-            if (cards[currentCard + 1]) {
-                cards[currentCard + 1].classList.remove('ocult');
-            }else {
-                //game is finished
-                //we show the results
-                const results = document.getElementById('resultats');
-                results.classList.remove('ocult');
-                let ul= document.createElement('ul');
-                //get all the elements from local storage and an add to llistatRespostes 
-                //TODO: sort the list by the order user has played
-                for (let i = 0; i < localStorage.length; i++) {
-                    const key = localStorage.key(i);
-                    const value = localStorage.getItem(key);
-                
-                    // Crea un element de llista (<li>) per a cada clau i valor
-                    const li = document.createElement('li');
-                    li.innerHTML = `${key}: <span>${value}</span>`;
-                    // Afegeix l'element de llista a la llista no ordenada
-                    ul.appendChild(li);
-                }   
-                results.appendChild(ul);
-           }
+            
+            //wait 1 second and show the next card
+            setTimeout(() => {
+                const cards = document.querySelectorAll('.movie-card');
+                let currentCard = 0;
+                cards.forEach((tmpCard, index) => {
+                    if (!tmpCard.classList.contains('ocult')) {
+                        tmpCard.classList.add('ocult');
+                        currentCard = index;
+                    }
+                });
+                //we show the next card
+                if (cards[currentCard + 1]) {
+                    cards[currentCard + 1].classList.remove('ocult');
+                }else {
+                    //game is finished
+                    //we show the results
+                    const results = document.getElementById('resultats');
+                    results.classList.remove('ocult');
+                    let ul= document.createElement('ul');
+                    //get all the elements from local storage and an add to llistatRespostes 
+                    //TODO: sort the list by the order user has played
+                    for (let i = 0; i < localStorage.length; i++) {
+                        const key = localStorage.key(i);
+                        const value = localStorage.getItem(key);
+                    
+                        // Crea un element de llista (<li>) per a cada clau i valor
+                        const li = document.createElement('li');
+                        li.innerHTML = `${key}: <span>${value}</span>`;
+                        // Afegeix l'element de llista a la llista no ordenada
+                        ul.appendChild(li);
+                    }   
+                    results.appendChild(ul);
+            }
+        }, 500);
             
         }
     });

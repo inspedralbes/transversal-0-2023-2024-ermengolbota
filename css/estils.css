@@ -70,11 +70,12 @@
 
 }
 
-.respostes button:hover {
-    border-radius: 0;
+#respostes button.actiu {
+   border-radius: 150% 100% 150% 100% ;
 }
 
 .respostes button:active {
         border-style: outset;
         border: none;  
 }
+
